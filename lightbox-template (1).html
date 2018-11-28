@@ -10,6 +10,16 @@
 	<title>Lightbox</title>
 </head>
 <body>
+	<h1>This is my lightbox project!</h1>
+
+	<main>
+	<div class="controls">
+			<button type="button" class="control" data-filter="all">All</button>
+			<button type="button" class="control" data-filter=".dog">dog</button>
+			<button type="button" class="control" data-filter=".cat">cat</button>
+			<button type="button" class="control" data-filter=".other">other</button>
+		</div>
+
 	<div class = "gallery">
 		<a class = "mix dog"  data-lightbox ="image" data-title = "corgi" href="images/1.jpg"><img src="images/1.jpg" alt="a cute corgi"></a>
 		<a class = "mix cat"  data-lightbox ="image" data-title = "two animals" href="images/2.jpg"><img src="images/2.jpg" alt="a dog and a cat"></a>
@@ -22,6 +32,13 @@
 		<a class = "mix other"  data-lightbox ="image" data-title = "a small little thing" href="images/9.jpg"><img src="images/9.jpg" alt="a small little thing"></a>
 
 	</div>
-<script src="js/lightbox.js"></script>
+	<script src="js/mixitup.min.js"></script>
+    <script>
+		var containerEl = document.querySelector('.gallery');
+
+		var mixer = mixitup(containerEl);
+	</script>
+	<script src="js/lightbox.js"></script>
+	</main>
 </body>
 </html>
